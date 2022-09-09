@@ -1,0 +1,47 @@
+<!-- use npx http-server to set up localhost !!-->
+<!-- Useful documentation links: 
+Metamask Docs (For connection to Web3): https://docs.metamask.io/guide/getting-started.html#basic-considerations
+OpenSea API: https://docs.opensea.io/reference/api-overview
+-->
+<!-- Issues: How do we set up a dapp environment for a mobile app?
+-->
+<!-- test wallet safeword: rural useful reveal miss around float weather fever sad more ride ordinary -->
+
+<!DOCTYPE html>
+<html>
+<title>KPEX NFT Prototype</title>
+<head>
+<style> body {font-family: "Raleway", sans-serif} </style>
+</head>
+<button style="background-color:yellowgreen" class="enableEthereumButton">Login to Account</button><br>
+Account: <span class="showAccount"></span><br><br> <hr>
+<p>Mainnet Connections</p>
+<button style="background-color: green;" id="NFTownersearch"> Check Owner of NFT (Mainnet)</button><br><br><hr>
+<p>Testnet Connections (Testing functions)</p>
+<button style="background-color: green;" id="testnet_NFTownersearch"> Check Owner of NFT (Testnet)</button><br><br>
+<button style="background-color: yellow;"id="testnet_walletsearch">Search any Wallet </button> <br><br>
+<button style="background-color: red;"id ="testnet_KPEXNFTsearch"> Scan any wallet for KPEX Partner NFT's</button> <br><br><hr>
+<p>Testnet Connections</p>
+<button style="background-color: yellow;"id="testnet_userwalletsearch"> Scan for NFT's in your wallet</button> <br><br>
+<button style="background-color: red;"id="testnet_userKPEXNFTsearch">Scan KPEX Partner NFT's in your wallet</button><br><br><hr>
+<button id = "test"> Test</button> <br><br><hr>
+<a href = "NFTmarketplace.html"> NFT Marketplace</a><br><br>
+<a href = "KPEXoffers.html"> KPEX Offers</a>
+</html>
+<script src="login.js"></script>
+<script type="module">
+    import {NFTownersearch} from "./NFTownersearch.mjs"
+    import{testnet_NFTownersearch} from "./testnet_NFTownersearch.mjs"
+    import {testnet_walletsearch} from "./testnet_walletsearch.mjs"
+    import {testnet_userwalletsearch} from "./testnet_userwalletsearch.mjs"
+    import {testnet_KPEXNFTsearch} from "./testnet_KPEXNFTsearch.mjs"
+    import {testnet_userKPEXNFTsearch} from "./testnet_userKPEXNFTsearch.mjs"
+    import {test} from "./test.mjs"
+    document.querySelector("#NFTownersearch").addEventListener("click",NFTownersearch)
+    document.querySelector("#testnet_NFTownersearch").addEventListener("click",testnet_NFTownersearch)
+    document.querySelector("#testnet_walletsearch").addEventListener("click",testnet_walletsearch)
+    document.querySelector("#testnet_userwalletsearch").addEventListener("click",testnet_userwalletsearch)
+    document.querySelector("#testnet_KPEXNFTsearch").addEventListener("click",testnet_KPEXNFTsearch)
+    document.querySelector("#testnet_userKPEXNFTsearch").addEventListener("click",testnet_userKPEXNFTsearch)
+    document.querySelector("#test").addEventListener("click",test)
+ </script>  
